@@ -8,17 +8,21 @@ import {ActiveLinkService} from "../active-link.service";
 })
 export class TodosListComponent {
 
-  isChecked = false;
+  isChecked: boolean[] = [];
   getTodos = []
   today = new Date();
-  isClicked = false
+  isClicked: boolean[] = []
 
   constructor(public readonly activeLinkService: ActiveLinkService) {
+
   }
 
 
-  toggleIcon() {
-    this.isClicked = !this.isClicked
-  }
+  toggleIcon(index: number) {
+    if (this.isClicked.length <= index) {
+      this.isClicked.length = index + 1;
+    }
+    this.isClicked[index] = !this.isClicked[index];
+ }
 
 }
