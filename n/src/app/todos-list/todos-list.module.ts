@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {TodosListComponent} from "./todos-list.component";
 import {RouterModule, Routes} from "@angular/router";
-import {TodosComponent} from "../todos/todos.component";
 import {FormsModule} from "@angular/forms";
 
 

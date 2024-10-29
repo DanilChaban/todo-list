@@ -3,19 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodosListComponent } from './todos-list/todos-list.component';
-import {TodosListModule} from "./todos-list/todos-list.module";
 import {ActiveLinkService} from "./active-link.service";
+import {RouterLinkActive} from "@angular/router";
+
 
 @NgModule({
 
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-
   ],
   providers: [ActiveLinkService],
   bootstrap: [AppComponent]

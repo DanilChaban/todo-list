@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {TodosComponent} from "./todos/todos.component";
+
 
 const routes: Routes = [
   {
     path: "",
-    loadChildren: () => import("./todos/todos.module").then((m) => m.TodosModule)
+    loadChildren: () => import("./todos-list/todos-list.module").then((m) => m.TodosListModule)
   },
   {
     path: "todos-list",
-    loadChildren: () => import("./todos-list/todos-list.module").then((m) => m.TodosListModule)
+    loadChildren: () => import("./todos/todos.module").then((m) => m.TodosModule)
+  },
+  {
+    path: "todo-favorite",
+    loadChildren: () => import("./todo-favorite/todo-favorite.module").then((m) => m.TodoFavoriteModule)
   }
 ];
 

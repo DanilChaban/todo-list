@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {ActiveLinkService} from "../active-link.service";
-import {trigger} from "@angular/animations";
+
 
 
 
@@ -21,10 +21,8 @@ export class TodosComponent {
     return this.inputValue = ''
   }
 
-
-
   isButtonDisabled() {
-   return  this.inputValue.trim() === ''
+    return  this.inputValue.trim() === ''
   }
 }
 

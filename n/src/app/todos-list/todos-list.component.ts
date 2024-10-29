@@ -1,22 +1,21 @@
 import { Component } from '@angular/core';
 import {ActiveLinkService} from "../active-link.service";
 
+
 @Component({
   selector: 'app-todos-list',
   templateUrl: './todos-list.component.html',
   styleUrls: ['./todos-list.component.scss']
 })
 export class TodosListComponent {
-
-  isChecked: boolean[] = [];
-  getTodos = []
+  isChecked: boolean[] = []
   today = new Date();
   isClicked: boolean[] = []
 
+
+
   constructor(public readonly activeLinkService: ActiveLinkService) {
-
   }
-
 
   toggleIcon(index: number) {
     if (this.isClicked.length <= index) {
@@ -24,5 +23,7 @@ export class TodosListComponent {
     }
     this.isClicked[index] = !this.isClicked[index];
  }
-
+  toggleHighlight(index: number) {
+    this.isChecked[index] = !this.isChecked[index];
+  }
 }

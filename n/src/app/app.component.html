@@ -1,1 +1,11 @@
+<nav class="nav">
+  <div class="text-todo">
+    <p>My TODO List</p>
+  </div>
+  <div class="item-nav">
+    <a routerLink="/todos-list" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"  class="second-page">ADD</a>
+    <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="second-page">LIST</a>
+    <a routerLink="/todo-favorite" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="second-page">FAVORITE TODO LIST</a>
+  </div>
+</nav>
 <router-outlet></router-outlet>

@@ -1,13 +1,4 @@
-<nav class="nav">
-  <div class="text-todo">
-    <p>My TODO List</p>
-  </div>
-  <div class="item-nav">
-    <a routerLink="" routerLinkActive="active" class="second-page">ADD</a>
-    <a routerLink="/todos-list"  class="second-page">LIST</a>
-    <p>FAVORITE TODO LIST</p>
-  </div>
-</nav>
+
 
 
 <div class="add-container">
@@ -15,8 +6,7 @@
     <p class="text">ADD TODO</p>
   </div>
   <input [(ngModel)]="inputValue" type="text"  placeholder="  Add Todo ..." class="input"><br>
-  <button  [class.disabled-button]="isButtonDisabled()" [disabled]="!inputValue" routerLink="/todos-list"  [ngClass]="{'active-input': inputValue}" (click)="addTodo()" class="button">ADD</button>
-
+  <button  [class.disabled-button]="isButtonDisabled()" [disabled]="!inputValue" routerLink=""  [ngClass]="{'active-input': inputValue}" (click)="addTodo()" class="button">ADD</button>
 </div>
 
 

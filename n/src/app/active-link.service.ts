@@ -8,14 +8,13 @@ export class ActiveLinkService {
 
   private todos: string[] = []
 
-
-  setTodos(todo: string) {
-   this.todos.unshift(todo)
+  setTodos(todo: string): void {
+      this.todos.unshift(todo)
   }
-  getTodos() {
-  return this.todos
+  getTodos(): string[] {
+      return this.todos
   }
-  deleteTodo(todo: string) {
-    this.todos = this.todos.filter(today => today !== todo)
+  deleteTodo(todo: string): void {
+      this.todos = this.todos.filter(today => today !== todo)
   }
 }
