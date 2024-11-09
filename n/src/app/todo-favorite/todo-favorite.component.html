@@ -1,0 +1,19 @@
+<div class="container-list">
+  <div class="block">
+    <p>My Todo Favorite List</p>
+  </div>
+  <div class="container-child">
+    <div  class="container-todos">
+      <div *ngFor="let favorite of favoriteService.getFavorites() let i = index"  class="block-todo" [ngClass]="{'highlighted': isChecked[i]}" (click)="toggleHighlight(i)">
+        <div class="block-checkbox" >
+          <input type="checkbox" [ngModel]="isChecked[i]">
+          <p class="text-todo">{{favorite.value}}</p>
+        </div>
+        <div class="block-delete">
+          <p class="text-month">{{ favorite.date| date:'MMM d, y' }}</p>
+          <button (click)="favoriteService.deleteFavorites(favorite.value)" class="delete-button">X</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

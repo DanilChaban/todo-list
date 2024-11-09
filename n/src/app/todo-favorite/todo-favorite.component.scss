@@ -1,0 +1,83 @@
+.text-todo {
+  font-size: 23px;
+  margin: 10px 0 0 20px;
+  color: black;
+}
+
+.container-list {
+  box-shadow: 2px 10px 15px rgba(75, 71, 71, 0.3);
+  width: 1200px;
+  margin: 55px auto 0;
+  border: 1px solid rgba(7, 2, 2, 0.15);
+}
+
+.block {
+  background-color: rgba(128, 128, 128, 0.15);
+  height: 50px;
+
+  p{
+    padding: 15px 0 0 20px;
+  }
+}
+
+.container-child {
+  border: 1px solid rgba(7, 2, 2, 0.15);
+}
+
+.container-todos {
+  border: 1px solid rgba(7, 2, 2, 0.15);
+  width: 1150px;
+  margin: 35px auto 20px;
+}
+
+.block-todo {
+  display: flex;
+  border: 1px solid rgba(7, 2, 2, 0.15);
+  height: 50px;
+  width: 1150px;
+  justify-content: space-between;
+}
+
+.block-checkbox {
+  display: flex;
+  margin-left: 25px;
+}
+
+.text-month {
+  margin-top: 19px;
+}
+
+.block-delete {
+  display: flex;
+  gap: 50px;
+  margin-right: 40px;
+}
+
+.delete-button {
+  color: white;
+  background-color: #fd542c;
+  border: none;
+  width: 25px;
+  height: 32px;
+  cursor: pointer;
+  margin: 12px 0 0 0;
+  font-size: 10px;
+}
+
+.delete-button:hover {
+  background-color: #e15130
+}
+
+.highlighted {
+  background-color: rgba(187, 227, 187, 0.9);
+}
+
+.clicked{
+  fill: red;
+}
+
+.active {
+  color: red;
+}
+
+
