@@ -1,12 +1,9 @@
-
-
-
 <div class="add-container">
   <div  class="blue-block">
     <p class="text">ADD TODO</p>
   </div>
   <input [(ngModel)]="inputValue" type="text"  placeholder="  Add Todo ..." class="input"><br>
-  <button  [class.disabled-button]="isButtonDisabled()" [disabled]="!inputValue" routerLink=""  [ngClass]="{'active-input': inputValue}" (click)="addTodo()" class="button">ADD</button>
+  <button  [class.disabled-button]="isButtonDisabled()"  routerLink=""   (click)="addTodo()" class="button">ADD</button>
 </div>
 
 

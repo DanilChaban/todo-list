@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {ActiveLinkService} from "../active-link.service";
+import {FavoriteService} from "../favorite.service";
+
 
 
 @Component({
@@ -9,21 +11,20 @@ import {ActiveLinkService} from "../active-link.service";
 })
 export class TodosListComponent {
   isChecked: boolean[] = []
-  today = new Date();
   isClicked: boolean[] = []
 
 
 
-  constructor(public readonly activeLinkService: ActiveLinkService) {
+
+  constructor(public readonly activeLinkService: ActiveLinkService, public readonly favoriteService: FavoriteService) {
   }
 
-  toggleIcon(index: number) {
-    if (this.isClicked.length <= index) {
-      this.isClicked.length = index + 1;
-    }
-    this.isClicked[index] = !this.isClicked[index];
+  toggleIcon(todo: string, index: any) {
+     this.favoriteService.setFavorites(todo);
+     this.isClicked[index] = true
  }
-  toggleHighlight(index: number) {
+
+  toggleHighlight(index: number ) {
     this.isChecked[index] = !this.isChecked[index];
   }
 }
