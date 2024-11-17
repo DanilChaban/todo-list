@@ -11,9 +11,10 @@
         </div>
         <div class="block-delete">
           <p class="text-month">{{ favorite.date| date:'MMM d, y' }}</p>
-          <button (click)="favoriteService.deleteFavorites(favorite.value)" class="delete-button">X</button>
+          <button (click)="deleteFavorites(favorite.value)" class="delete-button">X</button>
         </div>
       </div>
     </div>
   </div>
 </div>
+

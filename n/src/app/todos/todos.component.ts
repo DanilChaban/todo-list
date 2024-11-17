@@ -4,7 +4,6 @@ import {ActiveLinkService} from "../active-link.service";
 
 
 
-
 @Component({
   selector: 'app-todos',
   templateUrl: './todos.component.html',
@@ -12,13 +11,12 @@ import {ActiveLinkService} from "../active-link.service";
 })
 
 export class TodosComponent {
-  inputValue: string = ''
+  inputValue: string = '';
+
 
   constructor(public readonly activeLinkService: ActiveLinkService) {
 
   }
-
-
   addTodo() {
     this.activeLinkService.setTodos(this.inputValue);
 }
@@ -26,5 +24,7 @@ export class TodosComponent {
   isButtonDisabled() {
     return this.inputValue.trim() === ''
   }
+
 }
+
 

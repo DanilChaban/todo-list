@@ -1,4 +1,4 @@
-<nav class="nav">
+<nav [ngClass]="{'light-theme': !isNightTheme, 'night-theme': isNightTheme}" class="nav" >
   <div class="text-todo">
     <p>My TODO List</p>
   </div>
@@ -6,6 +6,7 @@
     <a routerLink="/todos-list" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"  class="second-page">ADD</a>
     <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="second-page">LIST</a>
     <a routerLink="/todo-favorite" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="second-page">FAVORITE TODO LIST</a>
+    <button (click)="toggleTheme()" class="night-theme-btn"><img [src]="isNightTheme ? 'assets/moon.svg '  : 'assets/sun.svg'" alt="Theme Icon" width="38px" height="38px"></button>
   </div>
 </nav>
 <router-outlet></router-outlet>

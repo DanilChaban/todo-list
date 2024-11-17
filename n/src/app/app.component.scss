@@ -20,11 +20,38 @@
 }
 
 .second-page {
-  text-decoration: none;
   margin-left: 18px;
-  color: black;
 }
 
 .active {
   color: red;
+}
+
+.night-theme-btn {
+  width: 40px;
+  height: 40px;
+  margin: -10px 0 0 1300px;
+  border: none;
+  position: fixed;
+  cursor: pointer;
+  outline: none;
+  background-color: #4096c9;
+  border-radius: 10px;
+  opacity: 0.6;
+}
+
+.night-theme-btn:hover {
+  background-color: #3c84b0;
+}
+
+
+.light-theme {
+  color: 000000FF;
+  transition: 0.3s;
+}
+
+.night-theme {
+  background-color: #222;
+  color: #fff;
+  transition: 0.3s;
 }

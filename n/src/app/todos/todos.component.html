@@ -3,8 +3,12 @@
     <p class="text">ADD TODO</p>
   </div>
   <input [(ngModel)]="inputValue" type="text"  placeholder="  Add Todo ..." class="input"><br>
-  <button  [class.disabled-button]="isButtonDisabled()"  routerLink=""   (click)="addTodo()" class="button">ADD</button>
+   <div *ngIf="activeLinkService.isDuplicate" class="repeat">
+    {{'Такая задача уже существует!'}}
+  </div>
+  <button  [class.disabled-button]="isButtonDisabled()"   (click)="addTodo()" class="button">ADD</button>
 </div>
+
 
 
 

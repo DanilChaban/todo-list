@@ -4,19 +4,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {ActiveLinkService} from "./active-link.service";
+import {NgOptimizedImage} from "@angular/common";
+
+
+
+
 
 
 
 @NgModule({
-
   declarations: [
     AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgOptimizedImage,
   ],
   providers: [ActiveLinkService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
